@@ -49,7 +49,7 @@ except URLError as e:
 # streamlit.text(fruityvice_response.json()) Just writes to the screen
 
 #Snowflake functions
-def get_fruit_list()
+def get_fruit_list():
     with my_cnx.cursor()
     my_cur.execute("SELECT * from fruit_load_list")
     return my_cur.fetchall()
