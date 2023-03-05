@@ -51,8 +51,8 @@ except URLError as e:
 #Snowflake functions
 def get_fruit_list():
     with my_cnx.cursor()
-    my_cur.execute("SELECT * from fruit_load_list")
-    return my_cur.fetchall()
+        my_cur.execute("SELECT * from fruit_load_list")
+        return my_cur.fetchall()
 
 if streamlit.button('Get Fruit Load List');
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
