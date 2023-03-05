@@ -25,8 +25,8 @@ fruit_to_show = my_fruit_list.loc[fruit_selected]
 streamlit.dataframe(fruit_to_show)
 
 streamlit.header('Fruityvice Fruit Advice!')
-fruityvice_response = rs.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json())
+fruityvice_response = rs.get("https://fruityvice.com/api/fruit/"+"kiwi")
+# streamlit.text(fruityvice_response.json()) Just writes to the screen
 
 fruityvice_norm = pd.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_norm)
